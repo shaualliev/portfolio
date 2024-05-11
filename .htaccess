@@ -1,0 +1,25 @@
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /portfolio/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /portfolio/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Simply Static
+# Директивы (строки) между `BEGIN Simply Static` и `END Simply Static`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<Files "C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\cd6e31346124ce8e60dad5fb6763ae10-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
